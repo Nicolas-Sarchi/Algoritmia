@@ -8,9 +8,18 @@ def scount(s):
     else:
         chars = {}
         for i in s :
-            chars[i] += 1
+            try :
+                chars[i] += 1
+                
+            except KeyError :
+                chars[i] = 1
+            
     return chars
 
 
-print (acount("paxo"))        
+print (scount("abbaaaa"))        
             
+
+
+            
+                        
